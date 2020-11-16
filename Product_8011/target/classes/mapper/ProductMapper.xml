@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjian.dao.ProductDao">
+
+    <insert id="addProduct" parameterType="com.tjian.entity.ProductPo"
+            keyProperty="productId" keyColumn="product_id" useGeneratedKeys="true">
+        insert into product(
+            product_name,
+            product_price,
+            product_classify,
+            production_place)
+        value (
+            #{productName},
+            #{proructPrice},
+            #{productClassify},
+            #{productionPlace}
+        )
+    </insert>
+    
+    <select id="getProduct" parameterType="long" resultType="com.tjian.entity.ProductPo">
+        select
+            product_id productId,
+            product_name productName,
+            product_price proructPrice,
+            product_classify productClassify,
+            production_place productionPlace
+        from product 
+        where product_id = #{productId}
+    </select>
+    
+    <update id="updateProduct" parameterType="com.tjian.entity.ProductPo" >
+        update
+            product
+        <set>
+            <if test = "productName != null"> product_name = #{productName},</if>
+            <if test = "proructPrice != null"> product_price = #{proructPrice},</if>
+            <if test = "productClassify != null"> product_classify = #{productClassify},</if>
+            <if test = "productionPlace != null"> production_place = #{productionPlace}</if>
+        </set>
+        where product_id = #{productId}
+
+    </update>
+
+    <delete id="deleteProduct" parameterType="long" >
+        delete from product where product_id = #{productId}
+    </delete>
+
+</mapper>

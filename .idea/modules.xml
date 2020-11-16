@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Eureka_7001/Eureka_7001.iml" filepath="$PROJECT_DIR$/Eureka_7001/Eureka_7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka_7002/Eureka_7002.iml" filepath="$PROJECT_DIR$/Eureka_7002/Eureka_7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka_7003/Eureka_7003.iml" filepath="$PROJECT_DIR$/Eureka_7003/Eureka_7003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Order_8031/Order_8031.iml" filepath="$PROJECT_DIR$/Order_8031/Order_8031.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Order_8032/Order_8032.iml" filepath="$PROJECT_DIR$/Order_8032/Order_8032.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Order_8033/Order_8033.iml" filepath="$PROJECT_DIR$/Order_8033/Order_8033.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Payment_8021/Payment_8021.iml" filepath="$PROJECT_DIR$/Payment_8021/Payment_8021.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Payment_8022/Payment_8022.iml" filepath="$PROJECT_DIR$/Payment_8022/Payment_8022.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Payment_8023/Payment_8023.iml" filepath="$PROJECT_DIR$/Payment_8023/Payment_8023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product_8011/product_8011.iml" filepath="$PROJECT_DIR$/Product_8011/product_8011.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product_8012/product_8012.iml" filepath="$PROJECT_DIR$/Product_8012/product_8012.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product_8013/product_8013.iml" filepath="$PROJECT_DIR$/Product_8013/product_8013.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tjian_shop.iml" filepath="$PROJECT_DIR$/.idea/tjian_shop.iml" />
+    </modules>
+  </component>
+</project>

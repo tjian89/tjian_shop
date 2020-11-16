@@ -1,0 +1,15 @@
+server:
+  port: 8033
+
+spring:
+  application:
+    name: order-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/, http://127.0.0.1:7002/eureka/, http://127.0.0.1:7003/eureka/
+  instance:
+    hostname: ${spring.application.name}-${server.port}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Order_8031" />
+        <module name="product_8013" />
+        <module name="product_8012" />
+        <module name="product_8011" />
+        <module name="Payment_8023" />
+        <module name="Payment_8021" />
+        <module name="Payment_8022" />
+        <module name="Eureka_7003" />
+        <module name="Eureka_7002" />
+        <module name="Eureka_7001" />
+        <module name="Order_8033" />
+        <module name="Order_8032" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Eureka_7001" target="1.8" />
+      <module name="Eureka_7002" target="1.8" />
+      <module name="Eureka_7003" target="1.8" />
+      <module name="Order_8031" target="1.8" />
+      <module name="Order_8032" target="1.8" />
+      <module name="Order_8033" target="1.8" />
+      <module name="Payment_8021" target="1.8" />
+      <module name="Payment_8022" target="1.8" />
+      <module name="Payment_8023" target="1.8" />
+      <module name="product_8011" target="1.8" />
+      <module name="product_8012" target="1.8" />
+      <module name="product_8013" target="1.8" />
+      <module name="tjian_shop" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Eureka_7001" options="-parameters" />
+      <module name="Eureka_7002" options="-parameters" />
+      <module name="Eureka_7003" options="-parameters" />
+      <module name="Order_8031" options="-parameters" />
+      <module name="Order_8032" options="-parameters" />
+      <module name="Order_8033" options="-parameters" />
+      <module name="Payment_8021" options="-parameters" />
+      <module name="Payment_8022" options="-parameters" />
+      <module name="Payment_8023" options="-parameters" />
+      <module name="product_8011" options="-parameters" />
+      <module name="product_8012" options="-parameters" />
+      <module name="product_8013" options="-parameters" />
+    </option>
+  </component>
+</project>
