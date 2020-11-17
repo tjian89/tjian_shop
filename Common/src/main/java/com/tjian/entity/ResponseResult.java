@@ -1,4 +1,4 @@
-package com.tjian.common;
+package com.tjian.entity;
 
 import java.io.Serializable;
 
@@ -18,8 +18,8 @@ public class ResponseResult<T> implements Serializable {
         this.result = result;
     }
 
-    public static ResponseResult success(){
-        return new ResponseResult(200, "t");
+    public static <T> ResponseResult<T> success(){
+        return new ResponseResult<T>(200, "t");
     }
 
     public static <T> ResponseResult successWithResult(T t){

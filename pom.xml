@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>com.tjian</groupId>
     <artifactId>tjian_shop</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -20,6 +20,8 @@
         <module>Order_8031</module>
         <module>Order_8032</module>
         <module>Order_8033</module>
+        <module>Common</module>
+        <module>document</module>
     </modules>
     <packaging>pom</packaging>
     <name>tjian_shop</name>
@@ -41,6 +43,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>2.2.6.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
         </dependency>
     </dependencies>
     <build>

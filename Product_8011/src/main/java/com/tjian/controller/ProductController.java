@@ -1,7 +1,7 @@
 package com.tjian.controller;
 
-import com.tjian.common.ResponseResult;
 import com.tjian.entity.ProductPo;
+import com.tjian.entity.ResponseResult;
 import com.tjian.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
