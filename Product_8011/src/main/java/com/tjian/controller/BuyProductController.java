@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.tjian.entity.ResponseResult;
 import com.tjian.order.OrderPo;
 import com.tjian.order.OrderProduct;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import com.tjian.payment.PaymentVo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +22,7 @@ import java.util.List;
 public class BuyProductController {
 
     private final String orderUrl = "http://ORDER-SERVICE";
+    private final String paymentUrl = "http://PAYMENT-SERVICE";
 
     @Resource
     private RestTemplate restTemplate;
@@ -49,6 +50,16 @@ public class BuyProductController {
             JSONObject body = repsonse.getBody();
             Long orderId = body.getLong("result");
             orderPo.setOrderId(orderId);
+        }
+
+        PaymentVo paymentVo = new PaymentVo();
+        paymentVo.setOrderId(orderPo.getOrderId());
+        paymentVo.setPaymentMoney(orderMoney.doubleValue());
+        paymentVo.setPaymentType(1);
+        ResponseEntity<JSONObject> paymentEntity = restTemplate.postForEntity(paymentUrl + "/payment/money", paymentVo, JSONObject.class);
+        if(200 == paymentEntity.getStatusCodeValue()){
+            JSONObject body = paymentEntity.getBody();
+            String paymentId = body.getString("result");
             return ResponseResult.successWithResult(orderPo);
         }
         return ResponseResult.failed(500, "系统繁忙，请稍后重试");

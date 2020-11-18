@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjian.dao.OrderProductDao">
+
+    <insert id="addOrderProduct">
+        insert into order_product(
+            order_id,
+            product_id,
+            product_price,
+            product_num
+        )values
+        <foreach collection="orderProducts" item="product" separator=",">
+            (#{orderId}, #{product.productId},#{product.productPrice},#{product.productNum})
+        </foreach>
+    </insert>
+
+    <delete id="deleteOrderProduct" parameterType="long">
+        delete from order_product where order_id = #{orderId}
+    </delete>
+
+    <select id="getOrderProduct" parameterType="long" resultType="com.tjian.order.OrderProduct">
+        select
+            product_id productId,
+            product_num productNum,
+            product_price productPrice
+        from order_product
+        where order_id = #{orderId}
+    </select>
+
+</mapper>

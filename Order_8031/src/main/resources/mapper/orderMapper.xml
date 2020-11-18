@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tjian.dao.OrderDao">
+
+    <insert id="insertOrder" parameterType="com.tjian.order.OrderPo" useGeneratedKeys="true" keyColumn="order_id" keyProperty="orderId">
+        insert into `order`(
+            order_money,
+            order_time,
+            order_status
+        )values(
+            #{orderMoney},
+            #{orderTime},
+            #{orderStatus}
+        )
+    </insert>
+
+    <delete id="deleteOrder" parameterType="long">
+        delete from `order` where order_id = #{orderId}
+    </delete>
+
+    <update id="updateOrder" parameterType="com.tjian.order.OrderPo">
+        update `order`
+        <set>
+            <if test="orderMoney != null">order_money = #{orderMoney},</if>
+            <if test="orderStatus != null">order_status = #{orderStatus}</if>
+        </set>
+        where order_id = #{orderId}
+    </update>
+
+    <select id="getOrder" parameterType="long" resultType="com.tjian.order.OrderPo">
+        select
+            order_id orderId,
+            order_money orderMoney,
+            order_time orderTime,
+            order_status orderStatus
+        from `order`
+        where order_id = #{orderId}
+    </select>
+
+</mapper>
